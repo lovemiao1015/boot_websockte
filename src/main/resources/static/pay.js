@@ -26,7 +26,7 @@ var pay = function (id) {
     //postData.frontURL="http://115.28.142.180:8080/EStore/e-righten.html";
     //postData.backURL="http://115.28.142.180:8080/EStore/e-righten.html";
 
-    postData.frontURL = "http://106.14.248.249:8080/show/show/"+id;
+    postData.frontURL = "";
     postData.backURL = "http://106.14.248.249:8080/show/show/"+id;
 
     // postData.frontURL = "http://127.0.0.1/EStore/e-righten.html";
@@ -48,7 +48,7 @@ var pay = function (id) {
 
     if (checkValue === "WX") {
 
-        window.location.href="https://mchapi.allpayx.com/testjspay?acqID=99020344&backURL=http://106.14.248.249:8080/show/show/"+id+"&charSet=UTF-8&frontURL=http://106.14.248.249:8080/show/show/"+id+"&goodsInfo=thanks&merID=000000000000015&merReserve=test&orderAmount=0.01&orderCurrency=USD&signature="+signature+"&orderNum="+orderNum+"&paymentSchema=WX&signType=sha256&transTime="+transTime+"&transType=PURC&version=VER000000002";
+        window.location.href="https://mchapi.allpayx.com/testjspay?acqID=99020344&backURL=http://106.14.248.249:8080/show/show/"+id+"&charSet=UTF-8&frontURL="+postData.frontURL+"&goodsInfo=thanks&merID=000000000000015&merReserve=test&orderAmount=0.01&orderCurrency=USD&signature="+signature+"&orderNum="+orderNum+"&paymentSchema=WX&signType=sha256&transTime="+transTime+"&transType=PURC&version=VER000000002";
 
         // window.open("https://www.allpayx.com/EStore/wx.html?postData=" + base64encode(JSON.stringify(postData)));
 

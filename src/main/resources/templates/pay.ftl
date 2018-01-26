@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="/show/static/sha256.js"></script>
-    <script src="/show/static/pay.js"></script>
+    <script src="../static/sha256.js"></script>
+    <script src="../static/pay.js"></script>
     <script>
         pay(${orderId});
     </script>

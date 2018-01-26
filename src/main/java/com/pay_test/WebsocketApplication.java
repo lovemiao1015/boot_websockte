@@ -43,7 +43,7 @@ public class WebsocketApplication extends SpringBootServletInitializer {
 
     int info=1;
 
-    @Scheduled(fixedRate = 1000)
+    //@Scheduled(fixedRate = 1000)
     public void outputLogger(){
         logger.info("测试日志输出"+info++);
     }
@@ -51,7 +51,7 @@ public class WebsocketApplication extends SpringBootServletInitializer {
     /**
      * 推送日志到/topic/pullLogger
      */
-    @PostConstruct
+    //@PostConstruct
     public void pushLogger(){
         ExecutorService executorService= Executors.newFixedThreadPool(2);
         Runnable runnable= () -> {
